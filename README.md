@@ -81,6 +81,13 @@
      -- |:--:|--:
      why|20|男
      tana|20|女
+   * \`````` 代码段
+     ```
+     c
+     printf("hello world\n");
+     ```
+   * 超链接技术
+     [Github](https://github.com "点击访问")
 
 
 
