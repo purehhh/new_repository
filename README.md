@@ -25,35 +25,35 @@
 ---
 ## 设备认证
 * 如何让网站的账户与设备绑定  后续完成代码的管理  上传下载
-  1. ```git init```  //创建本地仓库  后续对仓库的操作  都要在仓库位置
-  2. ```git config --list```  //查看git配置文件
+  1. ```git init  //创建本地仓库  后续对仓库的操作  都要在仓库位置```
+  2. ```git config --list  //查看git配置文件```
   3. ```git config --global user.email "邮箱"```
   4. ```git config --global user.name "名字"```
-  5. ```ssh-keygen -t -res -C "注册邮箱"``` //创建本地密文
+  5. ```ssh-keygen -t -res -C "注册邮箱" //创建本地密文```
 * 去对应目录查找密文文件
-  1. rsa.pub 复制密文 粘贴 settings -> SSH key and GPG -> new sshkey -> 粘贴
-  2. ssh -T git@github.com //测试关联是够成功
+  1. ```rsa.pub 复制密文 粘贴 settings -> SSH key and GPG -> new sshkey -> 粘贴```
+  2. ```ssh -T git@github.com //测试关联是够成功```
 * 为目标仓库器别名  定位目标仓库  后续上传
-  1. git remote add origin "ssh地址"  //为ssh仓库地址创建别名为orgin
-  2. git remote remove origin //删除origin别名
-  3. git remote add origin "ssh地址"  //为ssh仓库地址创建别名为origin
+  1. ```git remote add origin "ssh地址"  //为ssh仓库地址创建别名为orgin```
+  2. ```git remote remove origin //删除origin别名```
+  3. ```git remote add origin "ssh地址"  //为ssh仓库地址创建别名为origin```
 ## 本地设备与云端仓库的交互逻辑
-  1. git add code.c //将code.c到git缓冲区里
-  2. git commit "提交说明" //提交记录  code.c到本地仓库
-  3. git push origin master  //推到到云端仓库里
-  4. git add //添加内容
-  5. git rm //删除本地文件 并删除库数据
+  1. ```git add code.c //将code.c到git缓冲区里```
+  2. ```git commit "提交说明" //提交记录  code.c到本地仓库```
+  3. ```git push origin master  //推到到云端仓库里```
+  4. ```git add //添加内容```
+  5. ```git rm //删除本地文件 并删除库数据```
   6. git restore //恢复被删除(仓库存在)
   7. ```git status``` //查看状态
 ##  代码更新的依赖关系被破坏
   1. 本地内容要比云端新  完成更新替换  但是如果直接修改云端内容  导致本地内容无法再次提交
   2. 先拉取git pull 云端内容  与本地内容合并或操作  再次推即可
-  3. gti pull --rebase origin master
-  4. git rebase --skip //忽略本地内容  保留云端内容
-  5. git rebase --abort  //忽略云端内容  保留本地内容
-  6. git rebase --continue //双端 git都保留
-*下载开源代码
-  1. git clone "http仓库地址" //下载开源项目code资源
-*分支Branch
+  3. ```gti pull --rebase origin master```
+  4. ```git rebase --skip //忽略本地内容  保留云端内容```
+  5. ```git rebase --abort  //忽略云端内容  保留本地内容```
+  6. ```git rebase --continue //双端 git都保留```
+* 下载开源代码
+  1. ```git clone "http仓库地址" //下载开源项目code资源```
+* 分支Branch
   1. 关于分支的相关命令  创建分支  选择分支  合并分支等等
 
